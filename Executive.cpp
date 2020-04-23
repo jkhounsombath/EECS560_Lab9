@@ -49,6 +49,7 @@ void Executive::run()
     else if(choice == 4)
     {
       sHeap->deleteMin();
+      sHeap->print();
       std::cout<<"\n\n";
     }
     else if(choice == 5)
@@ -137,7 +138,6 @@ void Executive::performance()
     buildSkewTimer(i);
     deleteSkewTimer(i);
   }
-  /*
   std::cout<<"_______________________LEFTIST HEAP_________________________\n";
   std::cout<<"Input size ";
   for(int i = 1; i < 6; i++)
@@ -177,5 +177,4 @@ void Executive::performance()
     std::cout<<deleteSkewTimes[i]<<" ";
   }
   std::cout<<"\n\n\n";
-  */
 }
