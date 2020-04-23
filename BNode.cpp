@@ -5,6 +5,7 @@ BNode::BNode()
 	m_entry = 0;
 	m_left = nullptr;
 	m_right = nullptr;
+	m_rank = 0;
 }
 
 
@@ -13,6 +14,7 @@ BNode::BNode(int entry)
 	m_entry= entry;
 	m_left= nullptr;
 	m_right= nullptr;
+	m_rank = 0;
 }
 
 BNode::~BNode()

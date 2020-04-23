@@ -55,12 +55,13 @@ BNode* leftistHeap::merge(BNode* h1, BNode* h2)
       tempNode = nullptr;
     }
     h1->setRight(merge(h1->getRight(), h2));
-    if(rank(h1->getLeft()) < rank(h1->getRight()))
+    if(h1->getLeft()->getRank() < h1->getRight()->getRank())
     {
       BNode* tempNode = h1->getLeft();
       h1->setLeft(h1->getRight());
       h1->setRight(tempNode);
       tempNode = nullptr;
+      h1->setRank(h1->getRight()->getRank() + 1);
     }
     return h1;
   }
