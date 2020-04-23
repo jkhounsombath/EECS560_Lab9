@@ -4,6 +4,10 @@ Executive::Executive(std::string fileName)
 {
   lHeap= new leftistHeap();
   sHeap= new skewHeap();
+  buildLeftistHeap= new leftistHeap();
+  deleteLeftistHeap = new leftistHeap();
+  buildSkewHeap = new skewHeap();
+  deleteSkewHeap = new skewHeap();
   std::ifstream inFile(fileName);
   int entry;
   while(inFile>>entry)

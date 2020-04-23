@@ -68,7 +68,8 @@ BNode* leftistHeap::merge(BNode* h1, BNode* h2)
 
 void leftistHeap::insert(int entry)
 {
-  m_root = merge(new BNode(entry), m_root);
+  BNode* node= new BNode(entry);
+  m_root = merge(node, m_root);
   count++;
 }
 
